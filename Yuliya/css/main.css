@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Manrope, sans-serif;
+    background-color: #ebebeb;
+}
+
+/* Шапка */
+.header {
+  margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+    box-shadow: 0px 1px 50px #0080ff3f; 
+}
+
+.header__logo {
+  margin-left: 200px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #0073e6;
+}
+
+.header__nav .header__menu {
+  margin-right: 200px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header__menu-item .header__menu-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.header__menu-link:hover {
+    color: #0073e6;
+}
+
+/* Основной контент */
+.main-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  margin-bottom: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+}
+
+.main-content__text {
+    max-width: 50%;
+}
+
+.main-content__title {
+    font-size: 90px;
+    line-height: 1;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.main-content__description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.main-content__button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0073e6;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.main-content__button:hover {
+    box-shadow: 0px 1px 50px #0073e6a8; 
+}
+
+/* Изображение */
+.main-content__image {
+    max-width: 50%;
+}
+
+.main-content__photo {
+    width: 100%;
+    height: auto;
+}
+
+.line{
+  position: absolute;
+  z-index: -1;
+  margin-top: -20px;
+}
+
+.partners {
+  position: absolute;
+  left: 230px;
+  top: 850px;
+  max-width: 1500px;
+  border-radius: 20px;
+    text-align: center;
+    padding: 40px 80px;
+    background-color: white;
+    margin: 50px auto;
+    box-shadow: 0px 1px 50px #0080ff3f; 
+}
+
+.partners__title {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.partners__description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Карусель */
+.partners__carousel {
+    overflow: hidden;
+    width: 100%;
+
+  }
+
+.partners__carousel-track {
+    display: flex;
+    gap: 30px;
+
+}
+
+.partners__logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.services {
+    max-width: 1500px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.services__title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Сетка услуг */
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px;
+}
+
+.services__item {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.services__item:hover {
+    transform: translateY(-5px);
+}
+
+.services__image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0px 7px 30px #0080ff3f;
+}
+
+.services__name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.services__description {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Адаптация под меньшие экраны */
+@media (max-width: 1024px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки при ширине экрана до 1024px */
+    }
+}
+
+@media (max-width: 768px) {
+    .services__grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка при ширине экрана до 768px */
+    }
+}
+
+.why-choose-us {
+  max-width: 1500px;
+  margin: 100px auto;
+    margin-top: 100px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.why-choose-us__title {
+    font-size: 52px;
+    font-weight: 800;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Сетка для секции "Почему выбирают нас" */
+.why-choose-us__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 колонки */
+    gap: 20px;
+}
+
+.why-choose-us__item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 7px 10px #0080ff21;
+    transition: transform 0.3s ease-in-out;
+}
+
+.why-choose-us__item:hover {
+    transform: translateY(-5px);
+}
+
+.why-choose-us__item h3 {
+    font-size: 20px;
+    color: #0073e6;
+    margin-bottom: 10px;
+}
+
+.why-choose-us__item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Адаптация под меньшие экраны */
+@media (max-width: 1024px) {
+    .why-choose-us__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 колонки при ширине экрана до 1024px */
+    }
+}
+
+@media (max-width: 768px) {
+    .why-choose-us__grid {
+        grid-template-columns: repeat(1, 1fr); /* 1 колонка при ширине экрана до 768px */
+    }
+}
+
+.line-2{
+  position: absolute;
+  z-index: -10;
+  top: 2100px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
+    margin: 0px auto;
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Левая часть: Название */
+.footer__left {
+    flex: 1;
+}
+
+.footer__logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+}
+
+/* Центральная часть: Навигация */
+.footer__center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer__nav {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__nav li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.footer__nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.footer__nav li a:hover {
+    color: #0073e6;
+}
+
+/* Правая часть: Контакты */
+.footer__right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer__socials {
+    list-style: none;
+    padding: 0;
+}
+
+.footer__socials li {
+    margin-bottom: 5px;
+}
+
+.footer__socials li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer__socials li a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность под меньшие экраны */
+@media (max-width: 768px) {
+    .footer__container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer__left, .footer__center, .footer__right {
+        margin-bottom: 20px;
+    }
+
+    .footer__right {
+        text-align: center;
+    }
+}
